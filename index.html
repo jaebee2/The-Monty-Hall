@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monty Hall Problem</title>
+    <style>
+        .door {
+            display: inline-block;
+            width: 100px;
+            height: 150px;
+            margin: 10px;
+            border: 2px solid black;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .door img {
+           width: 100%;
+           height: 80%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .selected {
+            background-color: lightblue;
+        }
+        .revealed {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Monty Hall Problem Simulation</h1>
+    <p>Select a door to reveal a prize.</p>
+    <div id="doors">
+        <div class="door" onclick="selectDoor(0)">
+            <img src="goat.jpg" alt="Goat">
+            Door 1
+        </div>
+        <div class="door" onclick="selectDoor(1)">
+            <img src="goat.jpg" alt="Goat">
+            Door 2
+        </div>
+        <div class="door" onclick="selectDoor(2)">
+            <img src="goat.jpg" alt="Goat">
+            Door 3
+        </div>
+    </div>
+    <p id="result"></p>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="montyhall.js"></script>
+</body>
+</html>
